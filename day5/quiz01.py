@@ -20,18 +20,11 @@ def check_balance(string) :
   for s in string :
     if s in bracket.values :
       stack.append(s)
-    elif s in [']', ')'] and len(stack) == 0:
-      return "no"
-    elif s == ']' and stack[-1] == '[':
-      stack.pop()
-    elif s == ')' and stack[-1] == '(' :
-      stack.pop()
-    elif s in [']', ')'] :
-      return "no"
-  if len(stack) == 0 :
-    return "yes"
-  else :
-    return "no"
+    elif s in bracket :
+      if stack[-1] == bracket[s] :
+        stack.pop()
+      else :
+        return "no"
 
 for string in string_list :
   print(check_balance(string))

@@ -1,3 +1,5 @@
+# 03/09 화요일
+
 # 정렬 - 좌표 정렬하기 2
 
 case = int(input())
@@ -47,8 +49,7 @@ def insertion_sort(location) :
         break
   return
 
-# Merge Sort
-
+# Merge Sort - 미완성
 def merge_sort(array) :
   if len(array) == 1 :
     return array
@@ -85,56 +86,10 @@ def merge(array1, array2) :
 
   return merge_array
 
-# Python Sort
-
-def sort(array) :
-  array=[]
-  n=int(input())
-  for i in range(n):
-      array.append(list(map(int, input().split())))
-  for i in range(n):
-      # a=array[i][0]
-      # b=array[i][1]
-      # a,b=b,a
-      array[i][0],array[i][1]=array[i][1],array[i][0]
-  array.sort()
-  for i in range(n):
-      a=array[i][0]
-      b=array[i][1]
-      a,b=b,a
-      print(a,b)
-
-
-#bubble_sort(location)
-#selection_sort(location)
-#insertion_sort(location)
+# bubble_sort(location)
+# selection_sort(location)
+# insertion_sort(location)
 merge_sort(location)
 
 for l in location :
   print(l)
-
-case = int(input())
-
-location = []
-
-for i in range(case) :
-  X, Y = (map(int, input().split()))
-  location += [Y, X]
-
-location.sort()
-
-for l in location :
-    print(l[1], l[0])
-
-# case = int(input())
-
-# location = []
-
-# for i in range(case) :
-#   X, Y = (map(int, input().split()))
-#   location += [Y, X]
-
-# location.sort()
-
-# for l in location :
-#     print(l[1], l[0])
