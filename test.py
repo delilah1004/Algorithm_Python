@@ -44,19 +44,6 @@
 
 # 정렬 - 좌표 정렬하기 2
 
-# case = int(input())
-
-# location = []
-
-# for i in range(case) :
-#   X, Y = (map(int, input().split()))
-#   location += [Y, X]
-
-# location.sort()
-
-# for l in location :
-#     print(l[1], l[0])
-
 # 이분탐색 - 나무 자르기
 
 # 03/10 수요일
@@ -66,6 +53,9 @@
 # 스택 - 스택 수열
 
 # 큐 - 회전하는 큐
+
+
+
 
 # 03/11 목요일
 

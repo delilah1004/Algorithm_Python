@@ -125,3 +125,16 @@ location.sort()
 
 for l in location :
     print(l[1], l[0])
+
+# case = int(input())
+
+# location = []
+
+# for i in range(case) :
+#   X, Y = (map(int, input().split()))
+#   location += [Y, X]
+
+# location.sort()
+
+# for l in location :
+#     print(l[1], l[0])
