@@ -13,5 +13,4 @@ for i in range(case) :
 # Python Sort
 location.sort()
 
-for l in location :
-    print(l[1], l[0])
+print(f'{l[1]} {l[0]}' for l in location)

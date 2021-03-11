@@ -1,6 +1,3 @@
-# 03/11 목요일
-
-# DFS와 BFS - 토마토
 
 import sys
 sys.stdin = open('a.txt','rt')
@@ -41,3 +38,7 @@ def ripe_tomato(ripe_tomatos) :
       
   # 토마토가 다 익는데 걸린 최소 날짜 반환
   return days
+
+ripe_tomatos = [(x,y) for x in range(M) for y in range(N) if tomato_box[x][y]==1]
+
+ripe_tomato()

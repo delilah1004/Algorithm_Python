@@ -18,13 +18,19 @@ while True :
 def check_balance(string) :
   stack = []
   for s in string :
-    if s in bracket.values :
+    if s in bracket.values() :
       stack.append(s)
+    elif not stack and s in bracket :
+      return "no"
+    elif s in bracket and stack[-1] == bracket[s] :
+      stack.pop()
     elif s in bracket :
-      if stack[-1] == bracket[s] :
-        stack.pop()
-      else :
-        return "no"
+      return "no"
+    
+  if not stack :
+    return "yes"
+  else :
+    return "no"
 
 for string in string_list :
   print(check_balance(string))

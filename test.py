@@ -36,7 +36,7 @@
 
 # 알고리즘 강의 2주차
 
-# 더하거나 뺴거나
+# 더하거나 빼거나
 
 # 03/09 화요일
 
@@ -51,6 +51,39 @@
 # 스택 - 균형잡힌 세상
 
 # 스택 - 스택 수열
+
+string_list = []
+
+bracket = {
+  ')':'(',
+  ']':'['
+}
+
+while True :
+  string = list(input())
+  if string[-1] == '.' and len(string) == 1 :
+    break
+  string_list += [string]
+
+def check_balance(string) :
+  stack = []
+  for s in string :
+    if s in bracket.values() :
+      stack.append(s)
+    elif not stack and s in bracket :
+      return "no"
+    elif s in bracket and stack[-1] == bracket[s] :
+      stack.pop()
+    elif s in bracket :
+      return "no"
+    
+  if not stack :
+    return "yes"
+  else :
+    return "no"
+
+for string in string_list :
+  print(check_balance(string))
 
 # 큐 - 회전하는 큐
 
