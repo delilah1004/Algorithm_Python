@@ -29,4 +29,4 @@ def find_virus(networks, start_node):
     return len(has_virus) - 1
 
 # 바이러스에 걸린 컴퓨터 출력
-print(find_virus(networks, 1))  # 1 이 시작노드입니다!
+print(find_virus(networks, 1))  # 1번 컴퓨터에서 시작
