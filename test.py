@@ -73,3 +73,30 @@
 # 큐, 덱 - 카드2
 
 # 정렬 - 수 정렬하기 2
+
+# 문자열 - 그룹 단어 체커
+
+# 기본 수학 1 - 설탕 배달
+
+# 기본 수학 1 - Fly me to the Alpha Centauri
+
+# 기본 수학 2 - 베르트랑 공준
+
+# 요세푸스 순열
+
+
+from collections import deque
+
+N, K = map(int, input().split())
+
+table = deque([str(i) for i in range(1, N+1)])
+y_array = []
+
+while table :
+  table.rotate(-2)
+  y_array.append(table.popleft())
+
+print("<",", ".join(y_array),">",sep='')
+
+
+
