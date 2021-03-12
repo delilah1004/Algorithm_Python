@@ -52,39 +52,6 @@
 
 # 스택 - 스택 수열
 
-string_list = []
-
-bracket = {
-  ')':'(',
-  ']':'['
-}
-
-while True :
-  string = list(input())
-  if string[-1] == '.' and len(string) == 1 :
-    break
-  string_list += [string]
-
-def check_balance(string) :
-  stack = []
-  for s in string :
-    if s in bracket.values() :
-      stack.append(s)
-    elif not stack and s in bracket :
-      return "no"
-    elif s in bracket and stack[-1] == bracket[s] :
-      stack.pop()
-    elif s in bracket :
-      return "no"
-    
-  if not stack :
-    return "yes"
-  else :
-    return "no"
-
-for string in string_list :
-  print(check_balance(string))
-
 # 큐 - 회전하는 큐
 
 # 03/11 목요일
@@ -96,3 +63,13 @@ for string in string_list :
 # 동적계획법 - 피보나치 함수
 
 # 동적계획법 - 가장 긴 증가하는 부분 수열
+
+# 03/12 금요일
+
+# 시험
+
+# 이분 탐색 - 숫자 카드
+
+# 큐, 덱 - 카드2
+
+# 정렬 - 수 정렬하기 2
