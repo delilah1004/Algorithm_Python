@@ -6,26 +6,22 @@ import sys
 
 T = int(input())
 
-def count_move(d) :
-  if d <= 2 :
-    return d
-  elif d <= 4 :
-    return 3
+def count_move(left, right) :
+  if right - left < 3 :
+    return right - left
   else :
-    # count : 목적지까지 걸리는 이동 횟수
-    # move : 이동 횟수가 같은 거리의 개수
-    # sym : 이동 횟수별 최대 거리
-    count, move, sym = 3, 2, 4
+    count = 0
+    move = 1
+    while True :
+      move += 1
+      left += move
+      right -= move
+      count += 2
+      if left == right :
+        return count
+      elif left > right :
+        return count - 1
 
-    while sym < d :
-      sym += move
-      count += 1
-      if count % 2 :
-        move += 1
-
-    return count
-      
 for t in range(T) :
   x, y = map(int, sys.stdin.readline().split())
-  d = y-x
-  print(count_move(d))
+  print(count_move(x, y))

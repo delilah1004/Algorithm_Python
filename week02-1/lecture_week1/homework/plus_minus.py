@@ -7,7 +7,7 @@ array = [1,1,1,1,1]
 target = 3
 count = 0
 
-def BT(array, index, result) :
+def plus_minus(index, result) :
   if index == len(array) :
     if result == target :
       global count 
@@ -15,8 +15,8 @@ def BT(array, index, result) :
     return
 
   num = array[index]
-  BT(array, index+1, result+num, target)
-  BT(array, index+1, result-num, target)
+  plus_minus(index+1, result+num)
+  plus_minus(index+1, result-num)
 
-BT(array, 0, 0, target)
+plus_minus(0, 0)
 print(count)

@@ -40,7 +40,7 @@
 
 # 03/09 화요일
 
-# 재귀 - 하노이 탑 이동 순서
+# 재귀 - 하노이 탑 이동 순서 - 건너뜀
 
 # 정렬 - 좌표 정렬하기 2
 
@@ -58,11 +58,11 @@
 
 # DFS와 BFS - 바이러스
 
-# DFS와 BFS - 토마토
+# DFS와 BFS - 토마토 - 건너뜀
 
 # 동적계획법 - 피보나치 함수
 
-# 동적계획법 - 가장 긴 증가하는 부분 수열
+# 동적계획법 - 가장 긴 증가하는 부분 수열 - 건너뜀
 
 # 03/12 금요일
 
@@ -78,25 +78,26 @@
 
 # 기본 수학 1 - 설탕 배달
 
-# 기본 수학 1 - Fly me to the Alpha Centauri
+# 기본 수학 1 - Fly me to the Alpha Centauri - 건너 뜀
 
 # 기본 수학 2 - 베르트랑 공준
 
-# 요세푸스 순열
+# 03/13 토요일
 
+# 브루트포스 - 영화감독 숌
 
-from collections import deque
+# 큐, 덱 - 요세푸스 순열
 
-N, K = map(int, input().split())
+# 동적 계획법 1 - 신나는 함수 실행
 
-table = deque([str(i) for i in range(1, N+1)])
-y_array = []
+# 동적 계획법 1 - 파도반 수열
 
-while table :
-  table.rotate(-2)
-  y_array.append(table.popleft())
+# 동적 계획법 1 - RGB 거리 - 건너 뜀
 
-print("<",", ".join(y_array),">",sep='')
+# 동적 계획법 1 - 정수 삼각형
 
+# 정수론 및 조합론 - 약수
 
+# DFS와 BFS - DFS와 BFS
 
+# 백트래킹 - N과 M - Combination으로 품
