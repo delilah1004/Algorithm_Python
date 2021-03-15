@@ -10,17 +10,19 @@ def count_move(left, right) :
   if right - left < 3 :
     return right - left
   else :
-    count = 0
-    move = 1
+    count = 2
+    move = 2
+    left += 1
+    right -= 1
     while True :
-      move += 1
       left += move
+      if left > right :
+        return count
+      elif right - left <= move :
+        return count + 1
       right -= move
       count += 2
-      if left == right :
-        return count
-      elif left > right :
-        return count - 1
+      move += 1
 
 for t in range(T) :
   x, y = map(int, sys.stdin.readline().split())
