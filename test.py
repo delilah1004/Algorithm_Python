@@ -92,8 +92,6 @@
 
 # 동적 계획법 1 - 파도반 수열
 
-# 동적 계획법 1 - RGB 거리 - 건너 뜀
-
 # 동적 계획법 1 - 정수 삼각형
 
 # 정수론 및 조합론 - 약수
@@ -101,3 +99,35 @@
 # DFS와 BFS - DFS와 BFS
 
 # 백트래킹 - N과 M - Combination으로 품
+
+# 03/15 월요일
+
+# 정렬 - 통계학
+
+# 분할정복 - 색종이 만들기
+
+# 동적 계획법 1 - RGB 거리
+
+# 그리디 알고리즘 - 동전 0
+
+# 그리디 알고리즘 - ATM
+
+# 분할정복 - 쿼드 트리
+
+# 기본 수학 1 - Fly me to the Alpha Centauri
+
+# 집합
+a = [1,2,3,4,5]
+# 집합의 길이
+n = len(a)
+# 조합의 길이
+num = 3
+
+def dfs(level, start, res) :
+  if level == num :
+    print(res)
+    return
+  for i in range(start, len(a)) :
+    dfs(level+1, i+1, res+str(a[i]))
+
+dfs(0, 0, "")
