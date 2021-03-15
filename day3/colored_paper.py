@@ -13,7 +13,6 @@ for _ in range(N) :
 
 # 시작행, 마지막 행, 시작 열, 마지막 열
 def divide_paper(row, col, l) :
-  # print(row, col, l)
   color = cp[row][col]
 
   # 색종이의 색 판별
