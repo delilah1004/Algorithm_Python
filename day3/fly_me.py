@@ -16,12 +16,11 @@ def count_move(left, right) :
     right -= 1
     while True :
       left += move
-      if left > right :
+      count += 1
+      if left >= right :
         return count
-      elif right - left <= move :
-        return count + 1
       right -= move
-      count += 2
+      count += 1
       move += 1
 
 for t in range(T) :
