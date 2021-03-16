@@ -9,11 +9,11 @@ n = len(a)
 # 조합의 길이
 num = 3
 
-def dfs(level, start, end, res) :
+def dfs(level, start, res) :
   if level == num :
     print(res)
     return
-  for i in range(start, end) :
-    dfs(level+1, i+1, n, res+str(a[i]))
+  for i in range(start, len(a)) :
+    dfs(level+1, i+1, res+str(a[i]))
 
-dfs(0, 0, n+1-num, "")
+dfs(0, 0, "")
